@@ -1,0 +1,39 @@
+// -------------------------
+// Exemplo_0507 - XNOR COM NORs
+// Nome: Maria Carolina Resende Jaudacy
+// Matricula: 667477
+// -------------------------
+
+module xnor_com_nor (output s, input a, input b);
+// definir dado local
+ wire nor_ab;
+ wire nor_a_norab;
+ wire nor_b_norab;
+
+// descrever por portas
+ nor operacao_nor_ab (nor_ab, a, b);
+ nor operacao_nor_a_norab (nor_a_norab, a, nor_ab);
+ nor operacao_nor_b_norab (nor_b_norab, b, nor_ab);
+ nor negacao (s, nor_a_norab, nor_b_norab);
+endmodule // xnor_com_nor
+
+module main;
+// ------------------------- definir dados
+ reg x;
+ reg y;
+ wire a;
+ xnor_com_nor resultado (a, x, y);
+// ------------------------- parte principal
+ initial
+ begin : main
+ $display("Exemplo_0507 - Maria Carolina Resende Jaudacy - 667477");
+ $display("Test module");
+ $display(" x y a");
+ // projetar testes do modulo
+ $monitor("%4b %4b %4b", x, y, a);
+    x = 1'b0; y = 1'b0;
+ #1 x = 1'b0; y = 1'b1;
+ #1 x = 1'b1; y = 1'b0;
+ #1 x = 1'b1; y = 1'b1;
+ end
+endmodule // main

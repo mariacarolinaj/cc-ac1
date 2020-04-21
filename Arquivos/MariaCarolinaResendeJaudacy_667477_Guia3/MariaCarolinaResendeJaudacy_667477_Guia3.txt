@@ -1,0 +1,187 @@
+Nome: Maria Carolina Resende Jaudacy
+Matrícula: 667477
+
+GUIA 3 - ARQUITETURA DE COMPUTADORES
+
+1)
+
+a. C(1,6) para 1001(2) = 110110(2)
+
+> 1001 com 6 bits = 001001
+> com complemento de 1: 110110
+
+b. C(1,8) para 1101(2) = 11110010(2)
+
+> 1101 com 8 bits = 00001101
+> com complemento de 1: 11110010
+
+c. C(2,6) para 101111(2) = 010001(2)
+
+> 101111 já possui 6 bits
+> com complemento de 1: 010000
+> com complemento de 2: 010000 + 1 = 010001
+
+d. C(2,7) para 10011(2) = 1101101(2)
+
+> 10011 com 7 bits = 0010011
+> com complemento de 1: 1101100
+> com complemento de 2: 1101100 + 1 = 1101101
+
+e. C(2,8) para 11011(2) = 11100101(2)
+
+> 11011 com 8 bits = 00011011
+> com complemento de 1: 11100100
+> com complemento de 2: 11100100 + 1 = 11100101
+
+2)
+
+a. C(1,6) para 321(4) = 000110(2)
+
+> 321(4) = 111001(2), já possui 6 bits
+> com complemento de 1: 000110
+
+b. C(1,8) para 5B(16) = 10100100(2)
+
+> 5B(16) = 01011011(2), já possui 8 bits
+> com complemento de 1: 10100100
+
+c. C(2,6) para 23(4) = 110101(2)
+
+> 23(4) = 1011(2)
+> 1011 com 6 bits = 001011
+> com complemento de 1: 110100
+> com complemento de 2: 110101 
+
+d. C(2,7) para 175(8) = 0000011(2)
+
+> 175(8) = 01111101(2)
+> 01111101 com 7 bits = 1111101
+> com complemento de 1: 0000010
+> com complemento de 2: 0000011
+
+e. C(2,8) B2(16) = 01001110(2)
+
+> B2(16) = 10110010(2), já possui 8 bits
+> com complemento de 1: 01001101
+> com complemento de 2: 01001110
+
+3)
+
+a. 1101(2) = 3(10)
+
+> removendo complemento de 2: 1101 - 1 = 1100
+> removendo complemento de 1: 0011
+> 0011(2) = +3
+
+b. 110011(2) = 13(10)
+
+> removendo complemento de 2: 110011 - 1 = 110010
+> removendo complemento de 1: 001101
+> 001101(2) = +13(10)
+
+c. 111101(2) = 000011(2)
+
+> removendo complemento de 2: 111101 - 1 = 111100
+> removendo complemento de 1: 000011 
+
+d. 1011111(2) = 0100001(2)
+
+> removendo complemento de 2: 1011111 - 1 = 1011110
+> removendo complemento de 1: 0100001
+
+e. 10111101(2) = 43(16)
+
+> removendo complemento de 2: 10111101 - 1 = 10111100
+> removendo complemento de 1: 01000011
+> 01000011(2) = 43(16)
+
+4)
+
+a. 10111(2) - 1101(2) = 1001010(2)
+
+> normalizando a quantidade de bits: 01101
+> aplicando complemento de 1: 10010
+> aplicando complemento de 2: 10011
+>   0 10111
+> + 1 10011
+> = 1001010
+
+b. 101,0111(2) - 10,01(2) = 10011,0011(2)
+
+> normalizando a quantidade de bits: 010,0100
+> aplicando complemento de 1: 101,1011
+> aplicando complemento de 2: 101,1100
+>   0 101,0111
+> + 1 101,1100
+> = 10011,0011
+
+c. 231(4) - 113(4) = 112(4)
+
+> 231(4) = 101101(2)
+> 113(4) = 010111(2)
+> aplicando complemento de 1: 101000
+> aplicando complemento de 2: 101001
+>   0  101101
+> + 1  101001
+> = 10 010110
+> 10 010110(2) = 112(4)
+
+d. 321(8) - 123(8) = 176(8)
+
+> 321(8) = 011010001(2)
+> 123(8) = 001010011(2)
+> aplicando complemento de 1: 110101100
+> aplicando complemento de 2: 110101101
+>   0 11010001
+> + 1 10101101
+> = 10 001 111 110 = 176(8)
+
+e. 7E6(16) - A1B(16) = DCB(16)
+
+> 7E6(16) = 0111 1110 0110(2)
+> A1B(16) = 1010 0001 1011(2)
+> aplicando complemento de 1: 0101 1110 0100
+> aplicando complemento de 2: 0101 1110 0101
+>   0 0111 1110 0110
+> + 1 0101 1110 0101
+> = 1 1101 1100 1011 = DCB(16)
+
+5)
+
+a. 101010(2) - 1011(2) = 1000011111(2)
+
+> normalizando a quantidade de bits do minuendo: 00101010
+> normalizando a quantidade de bits do subtraendo: 00001011  
+> aplicando complemento de 1: 11110100
+> aplicando complemento de 2: 11110101
+>   0 00101010
+> + 1 11110101
+> = 1000011111
+
+b. 101,1101(2) - 2,5(8) = 1 0011,1000(2) 
+
+> normalizando a quantidade de bits do minuendo: 0101,1101
+> normalizando a quantidade de bits do subtraendo: 0010,0101
+> aplicando complemento de 1: 1101,1010
+> aplicando complemento de 2: 1101,1011
+>   0 0101,1101
+> + 1 1101,1011
+> = 1 0011,1000
+
+c. 312(4) - B(16) = 10101011(2)
+
+>   0110110
+> + 1110101
+> = 10101011
+
+d. AB(16) - 1001111(2) = 1001011100(2)
+
+>   010101011
+> + 110110001
+> = 1001011100
+
+e. 36(10) - 2C(16) = 11111000(2)
+
+>   00100100
+> + 11010100
+> = 11111000

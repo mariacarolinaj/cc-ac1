@@ -1,0 +1,64 @@
+Resumo
+
+Este artigo foi produzido para a disciplina de Arquitetura de Computadores do curso deCiência da Computação da PUC Minas com base na pesquisa de Tiago Tobias Freitas, Thi-ago Luiz Pasqualinoto e Juliano Carlos Leão intitulada "O CPLD (Dispositivo Complexode Lógica Programação aplicado em automação industrial".  Aqui serão abordados algunspontos em específico como a caracterização das tecnologias ASIC, SPLD, CPLD, FPGA eum comparativo entre PROM, PLA e PAL.
+
+Palavras-chave: ASIC. SPLD. CPLD. FPGA. PROM. PLA. PAL.
+
+1. Introdução
+
+A pesquisa "O CPLD (Dispositivo Complexo de Lógica Programação aplicado em au-tomação industrial"traz consigo uma análise sobre algumas das tecnologias já existentes e utili-zadas amplamente no ramo da automação industrial - sendo estas o foco do presente artigo - eapresenta conclusões sobre um novo tipo de controlador lógico confiável e eficaz que se destacapor seu custo inferior quando comparado às tecnologias mais utilizadas atualmente, surgindocomo uma alternativa para a indústria.
+
+2. Desenvolvimento
+
+O  foco  principal  aqui  tratado  são  as  diferentes  tecnologias  de  dispositivos  existentesatualmente no mercado com base em suas especificidades e usos, além da preferência que ge-ralmente se dá pela capacidade programática de cada um deles:  ASIC’s, SPLD’s, CPLD’s eFPGA’s.
+
+2.1 ASIC
+
+Os chamados ASIC’s (Application Specific IC ou Circuito Integrado de Aplicação Es-pecífica) correspondem à tecnologia utilizada perante uma necessidade especial de fabricação,resumindo-se a circuitos integrados customizados.  Seu desenvolvimento geralmente envolveum alto tempo e custo de projeto, que pode ser compensado em implementações de larga es-cala.
+
+2.2 SPLD
+
+O SPLD (Simple Programmable Logic Device ou Dispositivo Lógico Programável Sim-ples) é uma arquitetura que é comumente utilizada para substituir componentes lógicos padrões,como portas AND, OR e NOT, sendo que sua maioria utiliza de células de memória (tais comoEPROM e FLASH) para definir suas funcionalidades.
+
+2.3 CPLD
+
+O CPLD (Complex Programmable Logic Device ou Dispositivo Lógico ProgramávelComplexo)  surgiu  a  partir  da  necessidade  de  se  aumentar  a  capacidade  da  arquitetura  dosSPLD’s,  funcionando  como  uma  integração  de  múltiplos  destes  em  um  único  chip.   Várias opções de  CPLD’s  podem  ser  encontrados  devido  ao  seu  rápido  crescimento  no  mercado,destacando-se seu baixo custo e alta velocidade.
+
+2.4 FPGA
+
+O FPGA (Field Programmable Gate Array) se caracteriza como um circuito integradoreprogramável com capacidade computacional de implementar funções lógicas que podem ocor-rer simultaneamente no arranjo de suas células.  Sua estrutura é composta por três principaistipos de recursos, sendo eles blocos lógicos, blocos de entrada e saída e chaves de interconexãoentre as células.
+
+2.5 PROM vs. PLA vs. PAL
+
+2.5.1 PROM
+
+Uso: Microcontroladores
+Arquitetura: Possui um decodificador completo para seus endereços de entradas.
+Reprogramável: Não
+Componente AND: Fixo
+Componente OR: Programável
+
+2.5.2 PLA
+
+Uso: Implementação de circuitos lógicos
+Arquitetura: Possui dois níveis de portas lógicas, sendo o primeiro AND e o segundo OR, resultando em saídas com o produto das entradas (AND) ou soma das entradas (OR).
+Reprogramável: Sim
+Componente AND: Programável
+Componente OR: Programável
+
+2.5.3 PAL
+
+Uso: Implementação de circuitos lógicos de hardware digital, sendo base para novas arquiteturas
+Arquitetura: Possui apenas um nível lógico programável (AND), sendo que são produzidas saídas com termos-produtos não compartilhados entre si.
+Reprogramável: Sim
+Componente AND: Programável
+Componente OR: Fixo
+
+2.6 Conclusão
+
+Vistas as diferenças entre cada um dos dispositivos tratados anteriormente, conclui-seque a tecnologia CPLD (tratada no artigo de embasamento deste) surgiu como uma alternativamuito viável para projetos que emerjam no mercado e tenham necessidades como baixo custo, alta velocidade e capacidade, já que sua composição permite a expansão de arquiteturas.
+
+Referências
+
+TOBIAS FREITAS, T.;  LUIZ PASQUALINOTO, T.;  CARLOS LEÃO, J.O CPLD (Disposi-tivo Complexo de Lógica Programação) aplicado em automação industrial.  In:  Feira SENAIPaulista de Inovação Tecnológica - INOVASENAI, 2005, Lençóis Paulista-SP. Disponível em:http://www.optotech.net.br/msx/cpld/11-55-1-PB.pdf. Acesso em: 10 out. 2019.
+

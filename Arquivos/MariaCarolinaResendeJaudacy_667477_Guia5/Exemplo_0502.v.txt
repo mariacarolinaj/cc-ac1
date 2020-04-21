@@ -1,0 +1,45 @@
+// -------------------------
+// Exemplo_0502 - OR COM NANDs
+// Nome: Maria Carolina Resende Jaudacy
+// Matricula: 667477
+// -------------------------
+
+module disjuncao_nand (output s, input a, input b);
+// definir dado local
+ wire and_a;
+ wire and_b;
+ wire and_ab;
+ 
+ wire nand_a;
+ wire nand_b;
+// descrever por portas
+ and operacao_and_a (and_a, a, a);
+ not operacao_not_a (nand_a, and_a);
+ 
+ and operacao_and_b (and_b, b, b);
+ not operacao_not_b (nand_b, and_b);
+ 
+ and operacao_and_ab (and_ab, nand_a, nand_b);
+ not operacao_not_a (s, and_ab);
+endmodule // disjuncao_nand
+
+module main;
+// ------------------------- definir dados
+ reg x;
+ reg y;
+ wire a;
+ disjuncao_nand resultado (a, x, y);
+// ------------------------- parte principal
+ initial
+ begin : main
+ $display("Exemplo_0502 - Maria Carolina Resende Jaudacy - 667477");
+ $display("Test module");
+ $display(" x y a");
+ // projetar testes do modulo
+ $monitor("%4b %4b %4b", x, y, a);
+ x = 1'b0; y = 1'b0;
+ #1 x = 1'b0; y = 1'b1;
+ #1 x = 1'b1; y = 1'b0;
+ #1 x = 1'b1; y = 1'b1;
+ end
+endmodule // main

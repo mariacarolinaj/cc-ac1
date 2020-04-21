@@ -1,0 +1,22 @@
+[*]
+[*] GTKWave Analyzer v3.3.97 (w)1999-2018 BSI
+[*] Mon Oct 21 18:43:45 2019
+[*]
+[dumpfile] "e:\users\1178475\Desktop\MariaCarolinaResendeJaudacy_667477_Guia9\Exemplo0906.vcd"
+[dumpfile_mtime] "Mon Oct 21 18:40:42 2019"
+[dumpfile_size] 1743
+[savefile] "e:\users\1178475\Desktop\MariaCarolinaResendeJaudacy_667477_Guia9\Exemplo_0906.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 211
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+Exemplo_0906.clock
+@29
+Exemplo_0906.p
+[pattern_trace] 1
+[pattern_trace] 0

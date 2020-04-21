@@ -1,0 +1,37 @@
+// -------------------------
+// Exemplo_0503 - AND COM NORs
+// Nome: Maria Carolina Resende Jaudacy
+// Matricula: 667477
+// -------------------------
+
+module conjuncao_nor (output s, input a, input b);
+// definir dado local
+ wire nor_a;
+ wire nor_b;
+// descrever por portas
+ nor operacao_nor_a (nor_a, a, a);
+ nor operacao_nor_b (nor_b, b, b);
+ 
+ nor operacao_nor_ab (s, nor_a, nor_b);
+endmodule // conjuncao_nor
+
+module main;
+// ------------------------- definir dados
+ reg x;
+ reg y;
+ wire a;
+ conjuncao_nor resultado (a, x, y);
+// ------------------------- parte principal
+ initial
+ begin : main
+ $display("Exemplo_0503 - Maria Carolina Resende Jaudacy - 667477");
+ $display("Test module");
+ $display(" x y a");
+ // projetar testes do modulo
+ $monitor("%4b %4b %4b", x, y, a);
+ x = 1'b0; y = 1'b0;
+ #1 x = 1'b0; y = 1'b1;
+ #1 x = 1'b1; y = 1'b0;
+ #1 x = 1'b1; y = 1'b1;
+ end
+endmodule // main

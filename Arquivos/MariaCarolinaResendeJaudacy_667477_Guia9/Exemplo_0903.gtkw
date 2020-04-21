@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.97 (w)1999-2018 BSI
+[*] Mon Oct 21 17:46:24 2019
+[*]
+[dumpfile] "e:\users\1178475\Desktop\ARQ\Exemplo0903.vcd"
+[dumpfile_mtime] "Mon Oct 21 17:44:35 2019"
+[dumpfile_size] 2406
+[savefile] "e:\users\1178475\Desktop\ARQ\Exemplo_0903.gtkw"
+[timestart] 0
+[size] 1000 646
+[pos] -1 -1
+*-7.198398 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 211
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 160
+@28
+Exemplo_0903.clock
+Exemplo_0903.p1
+Exemplo_0903.p2
+Exemplo_0903.p3
+@29
+Exemplo_0903.p4
+[pattern_trace] 1
+[pattern_trace] 0

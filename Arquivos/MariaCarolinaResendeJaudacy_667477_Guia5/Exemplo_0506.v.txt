@@ -1,0 +1,41 @@
+// -------------------------
+// Exemplo_0506 - XOR COM NANDs
+// Nome: Maria Carolina Resende Jaudacy
+// Matricula: 667477
+// -------------------------
+
+module disjuncao_exclusiva_nand (output s, input a, input b);
+// definir dado local
+ wire nand_a;
+ wire nand_b;
+ wire nand_a_nandb;
+ wire nand_b_nanda;
+
+// descrever por portas
+ nand operacao_nand_a (nand_a, a, a);
+ nand operacao_nand_b (nand_b, b, b);
+ nand operacao_nand_a_nandb (nand_a_nandb, a, nand_b);
+ nand operacao_nand_b_nanda (nand_b_nanda, b, nand_a);
+ nand nand_ab (s, nand_a_nandb, nand_b_nanda);
+endmodule // disjuncao_exclusiva_nand
+
+module main;
+// ------------------------- definir dados
+ reg x;
+ reg y;
+ wire a;
+ disjuncao_exclusiva_nand resultado (a, x, y);
+// ------------------------- parte principal
+ initial
+ begin : main
+ $display("Exemplo_0506 - Maria Carolina Resende Jaudacy - 667477");
+ $display("Test module");
+ $display(" x y a");
+ // projetar testes do modulo
+ $monitor("%4b %4b %4b", x, y, a);
+ x = 1'b0; y = 1'b0;
+ #1 x = 1'b0; y = 1'b1;
+ #1 x = 1'b1; y = 1'b0;
+ #1 x = 1'b1; y = 1'b1;
+ end
+endmodule // main

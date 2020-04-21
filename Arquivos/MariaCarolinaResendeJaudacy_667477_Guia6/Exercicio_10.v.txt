@@ -1,0 +1,60 @@
+// -------------------------
+// Exercicio_10 - Simplificação de expressão (maxtermos)
+// Nome: Maria Carolina Resende Jaudacy
+// Matricula: 667477
+// -------------------------
+
+module simplificacao (output s, input x, input y, input w, input z);
+// definir dado local
+ wire not_x;
+ wire not_y;
+ wire not_w;
+ wire or_notX_notY;
+ wire or_not_XYW;
+
+// descrever por portas -> X . (X' + Y' + W')
+not negacao_x (not_x, x);
+not negacao_y (not_y, y);
+not negacao_w (not_w, w);
+
+or op_or_notX_notY (or_notX_notY, not_x, not_y);
+or op_or_not_XYW (or_not_XYW, or_notX_notY, not_w);
+
+and op_and (s, x, or_not_XYW);
+endmodule // simplificacao
+
+module main;
+// ------------------------- definir dados
+ reg x;
+ reg y;
+ reg w;
+ reg z;
+ 
+ wire s;
+ simplificacao resultado (s, x, y, w, z);
+// ------------------------- parte principal
+ initial
+ begin : main
+ $display("Exercicio_10 - Maria Carolina Resende Jaudacy - 667477");
+ $display("Test module");
+ $display(" x y w z s");
+ // projetar testes do modulo
+ $monitor("%4b %4b %4b %4b %4b", x, y, w, z, s);
+    x = 1'b0; y = 1'b0; w = 1'b0; z = 1'b0;
+ #1 x = 1'b0; y = 1'b0; w = 1'b0; z = 1'b1;
+ #1 x = 1'b0; y = 1'b0; w = 1'b1; z = 1'b0;
+ #1 x = 1'b0; y = 1'b0; w = 1'b1; z = 1'b1;
+ #1 x = 1'b0; y = 1'b1; w = 1'b0; z = 1'b0;
+ #1 x = 1'b0; y = 1'b1; w = 1'b0; z = 1'b1;
+ #1 x = 1'b0; y = 1'b1; w = 1'b1; z = 1'b0;
+ #1 x = 1'b0; y = 1'b1; w = 1'b1; z = 1'b1;
+ #1 x = 1'b1; y = 1'b0; w = 1'b0; z = 1'b0;
+ #1 x = 1'b1; y = 1'b0; w = 1'b0; z = 1'b1;
+ #1 x = 1'b1; y = 1'b0; w = 1'b1; z = 1'b0;
+ #1 x = 1'b1; y = 1'b0; w = 1'b1; z = 1'b1;
+ #1 x = 1'b1; y = 1'b1; w = 1'b0; z = 1'b0;
+ #1 x = 1'b1; y = 1'b1; w = 1'b0; z = 1'b1;
+ #1 x = 1'b1; y = 1'b1; w = 1'b1; z = 1'b0;
+ #1 x = 1'b1; y = 1'b1; w = 1'b1; z = 1'b1;
+ end
+endmodule // main
